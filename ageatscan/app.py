@@ -66,7 +66,7 @@ class AgeAtScan(ChrisApp):
                           help='Display CSV in stdout. File is not written to',
                           default=False,
                           optional=True,
-                          type=str
+                          type=bool
                           )
 
     def run(self, options):
