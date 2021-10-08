@@ -12,7 +12,7 @@ class AgeAtScan(ChrisApp):
      """
     PACKAGE = __package__
     TITLE = 'Age Calculation'
-    CATEGORY = 'Math'
+    CATEGORY = 'Format'
     TYPE = 'ds'
     ICON = ''  # url of an icon image
     MIN_NUMBER_OF_WORKERS = 1  # Override with the minimum number of workers as int
