@@ -11,8 +11,22 @@ Description
 -----------
 
 ``ageatscan`` takes two CSV columns containing dates and finds the difference between them. Appends a new column containing the difference in days or months.
+Currently, the plugin only takes in CSV files directly inside /incoming. No idea if nested folders work.
 
-
+Input file structure:
+```
+/incoming
+	|---> scan.csv
+	|---> scan2.csv
+```
+Outputs with the same name.
+Output file structure:
+```
+/outgoing
+	|---> scan.csv
+	|---> scan2.csv
+```
+	
 Usage
 -----
 
