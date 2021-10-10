@@ -14,19 +14,20 @@ Description
 Currently, the plugin only takes in CSV files directly inside /incoming. No idea if nested folders work.
 
 Input file structure:
-```
-/incoming
-	|---> scan.csv
-	|---> scan2.csv
-```
+.. code::
+
+	/incoming
+		|---> scan.csv
+		|---> scan2.csv
+
 Outputs with the same name.
 Output file structure:
-```
-/outgoing
-	|---> scan.csv
-	|---> scan2.csv
-```
-	
+.. code::
+
+	/outgoing
+		|---> scan.csv
+		|---> scan2.csv
+
 Usage
 -----
 
