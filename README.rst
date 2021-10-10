@@ -1,4 +1,4 @@
-pl-simpledsapp
+pl-ageatscan
 ==============
 
 .. image:: https://img.shields.io/docker/v/fnndsc/pl-simpledsapp
