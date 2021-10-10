@@ -71,7 +71,8 @@ class AgeAtScan(ChrisApp):
 
     def run(self, options):
         input_files = glob.iglob(os.path.join(options.inputdir, options.inputPathFilter))
-
+        #outputdir = Path(options.outputdir).resolve()
+        #os.chdir(options.inputdir)
         def convert_delta(delta, options):
             if options.unit in ['mths', 'months', 'm']:
                 return round(delta.dt.days / 365.25 * 12, 1)
@@ -86,7 +87,7 @@ class AgeAtScan(ChrisApp):
             if options.verbose:
                 print(csv.to_csv(index=False))
             else:
-                csv.to_csv(file, index=False)
+                csv.to_csv(str(options.outputdir+'/'+os.path.basename(file)), index=False)
 
     def show_man_page(self):
         self.print_help()
