@@ -73,7 +73,7 @@ class AgeAtScan(ChrisApp):
         input_files = glob.iglob(os.path.join(options.inputdir, options.inputPathFilter))
 
         def convert_delta(delta, options):
-            if options['unit'] in ['mths', 'months', 'm']:
+            if options.unit in ['mths', 'months', 'm']:
                 return round(delta.dt.days / 365.25 * 12, 1)
             else:
                 return delta.dt.days
@@ -82,7 +82,7 @@ class AgeAtScan(ChrisApp):
             csv = pd.read_csv(file)
             csv[[options.minuend, options.subtrahend]] = csv[
                 [options.minuend, options.subtrahend]].apply(pd.to_datetime)
-            csv[options['result']] = convert_delta(csv[options.minuend] - csv[options.subtrahend], options)
+            csv[options.result] = convert_delta(csv[options.minuend] - csv[options.subtrahend], options)
             if options.verbose:
                 print(csv.to_csv(index=False))
             else:
